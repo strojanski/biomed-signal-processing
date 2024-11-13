@@ -1,0 +1,5 @@
+*.zip
+qrs_detection/data/*
+*/.venv/*
+
+*/__pycache__/
