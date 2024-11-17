@@ -281,6 +281,16 @@ def variation_ratio_test(signal, peak_candidates, fs, window=0.1, threshold=0.5)
     Returns:
     - refined_peaks: List of indices for R-wave peaks passing the variation ratio test.
     """
+    
+    # Dynamically adjust threshold based on signal noise
+    signal_noise_level = np.std(signal)
+    if signal_noise_level > 0.2:  # High noise
+        threshold *= 0.4
+    elif signal_noise_level < 0.1:  # Low noise
+        threshold *= 0.6
+    else:  # Moderate noise
+        threshold *= 0.5
+
     refined_peaks = []
     window_samples = int(window * fs)
 
@@ -389,7 +399,8 @@ def get_metrics(labels, detections, offset_threshold):
             if abs(label - detection) <= offset_threshold:  # Considered a match if within the offset threshold
                 tp += 1
                 matched = True
-                unmatched_detections.remove(detection)  # Remove matched detection from the list
+                if detection in unmatched_detections:
+                    unmatched_detections.remove(detection)  # Remove matched detection from the list
                 break
         if not matched:
             fn += 1  # If no match is found, it's a false negative

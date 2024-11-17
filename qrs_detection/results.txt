@@ -1,242 +1,239 @@
--------------------
-100
--------------------
 100
 Sensitivity (SE): 100.00%
-Positive Prediction (+P): 99.82%
-Detection Error Rate (DER): 0.176%
+Positive Prediction (+P): 99.69%
+Detection Error Rate (DER): 0.308%
 -------------------
 101
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.176%
+Sensitivity (SE): 99.63%
+Positive Prediction (+P): 99.52%
+Detection Error Rate (DER): 0.854%
 -------------------
 102
-Sensitivity (SE): 8.93%
-Positive Prediction (+P): 7.96%
-Detection Error Rate (DER): 194.281%
+Sensitivity (SE): 96.53%
+Positive Prediction (+P): 97.11%
+Detection Error Rate (DER): 6.341%
 -------------------
 103
-Sensitivity (SE): 9.15%
-Positive Prediction (+P): 7.39%
-Detection Error Rate (DER): 205.499%
+Sensitivity (SE): 99.67%
+Positive Prediction (+P): 100.00%
+Detection Error Rate (DER): 0.335%
 -------------------
 104
-Sensitivity (SE): 0.70%
-Positive Prediction (+P): 6.25%
-Detection Error Rate (DER): 109.855%
+Sensitivity (SE): 87.28%
+Positive Prediction (+P): 87.47%
+Detection Error Rate (DER): 25.227%
 -------------------
 105
-Sensitivity (SE): 8.93%
-Positive Prediction (+P): 7.88%
-Detection Error Rate (DER): 195.469%
+Sensitivity (SE): 94.05%
+Positive Prediction (+P): 95.22%
+Detection Error Rate (DER): 10.665%
 -------------------
 106
-Sensitivity (SE): 8.71%
-Positive Prediction (+P): 7.14%
-Detection Error Rate (DER): 204.575%
+Sensitivity (SE): 80.51%
+Positive Prediction (+P): 84.96%
+Detection Error Rate (DER): 33.746%
 -------------------
 107
-Sensitivity (SE): 7.92%
-Positive Prediction (+P): 7.33%
-Detection Error Rate (DER): 192.213%
+Sensitivity (SE): 98.13%
+Positive Prediction (+P): 90.79%
+Detection Error Rate (DER): 11.822%
 -------------------
 108
-Sensitivity (SE): 3.78%
-Positive Prediction (+P): 7.43%
-Detection Error Rate (DER): 143.335%
+Sensitivity (SE): 41.34%
+Positive Prediction (+P): 33.26%
+Detection Error Rate (DER): 141.612%
 -------------------
 109
-Sensitivity (SE): 0.70%
-Positive Prediction (+P): 12.12%
-Detection Error Rate (DER): 104.399%
+Sensitivity (SE): 54.04%
+Positive Prediction (+P): 49.48%
+Detection Error Rate (DER): 101.144%
 -------------------
 111
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 19.92%
+Positive Prediction (+P): 10.18%
+Detection Error Rate (DER): 255.790%
 -------------------
 112
-Sensitivity (SE): 15.13%
-Positive Prediction (+P): 7.16%
-Detection Error Rate (DER): 281.082%
+Sensitivity (SE): 92.47%
+Positive Prediction (+P): 46.81%
+Detection Error Rate (DER): 112.588%
 -------------------
 113
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 99.94%
+Positive Prediction (+P): 59.46%
+Detection Error Rate (DER): 68.207%
 -------------------
 114
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.044%
+Sensitivity (SE): 77.51%
+Positive Prediction (+P): 50.83%
+Detection Error Rate (DER): 97.460%
 -------------------
 115
-Sensitivity (SE): 5.90%
-Positive Prediction (+P): 6.90%
-Detection Error Rate (DER): 173.647%
+Sensitivity (SE): 99.59%
+Positive Prediction (+P): 100.00%
+Detection Error Rate (DER): 0.408%
 -------------------
 116
-Sensitivity (SE): 6.73%
-Positive Prediction (+P): 6.31%
-Detection Error Rate (DER): 193.225%
+Sensitivity (SE): 96.90%
+Positive Prediction (+P): 97.83%
+Detection Error Rate (DER): 5.246%
 -------------------
 117
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 98.57%
+Positive Prediction (+P): 55.69%
+Detection Error Rate (DER): 79.857%
 -------------------
 118
-Sensitivity (SE): 7.35%
-Positive Prediction (+P): 7.38%
-Detection Error Rate (DER): 184.910%
+Sensitivity (SE): 98.39%
+Positive Prediction (+P): 90.85%
+Detection Error Rate (DER): 11.517%
 -------------------
 119
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 74.31%
+Positive Prediction (+P): 53.09%
+Detection Error Rate (DER): 91.356%
 -------------------
 121
-Sensitivity (SE): 6.20%
-Positive Prediction (+P): 7.41%
-Detection Error Rate (DER): 171.315%
+Sensitivity (SE): 93.02%
+Positive Prediction (+P): 70.39%
+Detection Error Rate (DER): 46.109%
 -------------------
 122
-Sensitivity (SE): 7.96%
-Positive Prediction (+P): 7.31%
-Detection Error Rate (DER): 193.049%
+Sensitivity (SE): 97.54%
+Positive Prediction (+P): 97.62%
+Detection Error Rate (DER): 4.841%
 -------------------
 123
-Sensitivity (SE): 8.89%
-Positive Prediction (+P): 7.61%
-Detection Error Rate (DER): 199.032%
+Sensitivity (SE): 99.74%
+Positive Prediction (+P): 99.80%
+Detection Error Rate (DER): 0.461%
 -------------------
 124
-Sensitivity (SE): 9.37%
-Positive Prediction (+P): 7.33%
-Detection Error Rate (DER): 209.151%
+Sensitivity (SE): 79.68%
+Positive Prediction (+P): 65.36%
+Detection Error Rate (DER): 62.546%
 -------------------
 200
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 87.57%
+Positive Prediction (+P): 82.38%
+Detection Error Rate (DER): 31.160%
 -------------------
 201
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 87.10%
+Positive Prediction (+P): 97.21%
+Detection Error Rate (DER): 15.400%
 -------------------
 202
-Sensitivity (SE): 8.71%
-Positive Prediction (+P): 7.34%
-Detection Error Rate (DER): 201.276%
+Sensitivity (SE): 98.79%
+Positive Prediction (+P): 98.65%
+Detection Error Rate (DER): 2.563%
 -------------------
 203
-Sensitivity (SE): 8.58%
-Positive Prediction (+P): 7.68%
-Detection Error Rate (DER): 194.545%
+Sensitivity (SE): 62.71%
+Positive Prediction (+P): 64.47%
+Detection Error Rate (DER): 71.847%
 -------------------
 205
-Sensitivity (SE): 8.36%
-Positive Prediction (+P): 7.09%
-Detection Error Rate (DER): 201.100%
+Sensitivity (SE): 99.10%
+Positive Prediction (+P): 99.85%
+Detection Error Rate (DER): 1.048%
 -------------------
 207
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 73.67%
+Positive Prediction (+P): 77.64%
+Detection Error Rate (DER): 47.547%
 -------------------
 208
-Sensitivity (SE): 9.63%
-Positive Prediction (+P): 7.19%
-Detection Error Rate (DER): 214.650%
+Sensitivity (SE): 78.62%
+Positive Prediction (+P): 80.17%
+Detection Error Rate (DER): 40.822%
 -------------------
 209
-Sensitivity (SE): 0.04%
-Positive Prediction (+P): 8.33%
-Detection Error Rate (DER): 100.440%
+Sensitivity (SE): 98.30%
+Positive Prediction (+P): 91.05%
+Detection Error Rate (DER): 11.370%
 -------------------
 210
-Sensitivity (SE): 8.53%
-Positive Prediction (+P): 7.37%
-Detection Error Rate (DER): 198.724%
+Sensitivity (SE): 94.67%
+Positive Prediction (+P): 94.43%
+Detection Error Rate (DER): 10.912%
 -------------------
 212
-Sensitivity (SE): 7.57%
-Positive Prediction (+P): 6.95%
-Detection Error Rate (DER): 193.753%
+Sensitivity (SE): 99.46%
+Positive Prediction (+P): 87.02%
+Detection Error Rate (DER): 15.382%
 -------------------
 213
-Sensitivity (SE): 9.59%
-Positive Prediction (+P): 6.75%
-Detection Error Rate (DER): 222.877%
+Sensitivity (SE): 89.59%
+Positive Prediction (+P): 90.72%
+Detection Error Rate (DER): 19.581%
 -------------------
 214
-Sensitivity (SE): 9.77%
-Positive Prediction (+P): 7.91%
-Detection Error Rate (DER): 203.960%
+Sensitivity (SE): 95.12%
+Positive Prediction (+P): 90.55%
+Detection Error Rate (DER): 14.802%
 -------------------
 215
-Sensitivity (SE): 10.25%
-Positive Prediction (+P): 7.05%
-Detection Error Rate (DER): 224.901%
+Sensitivity (SE): 95.21%
+Positive Prediction (+P): 92.25%
+Detection Error Rate (DER): 12.794%
 -------------------
 217
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 91.36%
+Positive Prediction (+P): 90.64%
+Detection Error Rate (DER): 18.070%
 -------------------
 219
-Sensitivity (SE): 0.13%
-Positive Prediction (+P): 12.00%
-Detection Error Rate (DER): 100.836%
+Sensitivity (SE): 91.78%
+Positive Prediction (+P): 98.79%
+Detection Error Rate (DER): 9.343%
 -------------------
 220
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 98.99%
+Positive Prediction (+P): 99.95%
+Detection Error Rate (DER): 1.063%
 -------------------
 221
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 87.16%
+Positive Prediction (+P): 85.50%
+Detection Error Rate (DER): 27.620%
 -------------------
 222
-Sensitivity (SE): 4.93%
-Positive Prediction (+P): 7.55%
-Detection Error Rate (DER): 155.389%
+Sensitivity (SE): 94.27%
+Positive Prediction (+P): 92.65%
+Detection Error Rate (DER): 13.212%
 -------------------
 223
-Sensitivity (SE): 8.36%
-Positive Prediction (+P): 6.62%
-Detection Error Rate (DER): 209.503%
+Sensitivity (SE): 89.63%
+Positive Prediction (+P): 84.76%
+Detection Error Rate (DER): 26.485%
 -------------------
 228
-Sensitivity (SE): 8.32%
-Positive Prediction (+P): 7.55%
-Detection Error Rate (DER): 193.533%
+Sensitivity (SE): 83.05%
+Positive Prediction (+P): 66.39%
+Detection Error Rate (DER): 58.991%
 -------------------
 230
-Sensitivity (SE): 9.02%
-Positive Prediction (+P): 7.55%
-Detection Error Rate (DER): 201.364%
+Sensitivity (SE): 66.02%
+Positive Prediction (+P): 65.96%
+Detection Error Rate (DER): 68.045%
 -------------------
 231
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 78.07%
+Positive Prediction (+P): 88.40%
+Detection Error Rate (DER): 32.173%
 -------------------
 232
-Sensitivity (SE): 0.00%
-Positive Prediction (+P): 0.00%
-Detection Error Rate (DER): 100.000%
+Sensitivity (SE): 96.92%
+Positive Prediction (+P): 99.94%
+Detection Error Rate (DER): 3.139%
 -------------------
 233
-Sensitivity (SE): 11.04%
-Positive Prediction (+P): 8.13%
-Detection Error Rate (DER): 213.682%
+Sensitivity (SE): 87.25%
+Positive Prediction (+P): 69.32%
+Detection Error Rate (DER): 51.364%
 -------------------
 234
-Sensitivity (SE): 8.75%
-Positive Prediction (+P): 7.22%
-Detection Error Rate (DER): 203.828%
+Sensitivity (SE): 99.57%
+Positive Prediction (+P): 99.06%
+Detection Error Rate (DER): 1.375%
