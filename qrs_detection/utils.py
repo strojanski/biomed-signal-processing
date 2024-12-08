@@ -419,3 +419,53 @@ def get_metrics(labels, detections, offset_threshold):
     print(f"Detection Error Rate (DER): {detection_error_rate_value:.3f}%")
 
     return f"Sensitivity (SE): {sensitivity_value:.2f}%\nPositive Prediction (+P): {positive_prediction_value:.2f}%\nDetection Error Rate (DER): {detection_error_rate_value:.3f}%\n"
+
+
+def get_norm_metrics(labels, detections, offset_threshold, n_labels):
+    """
+    Calculate the performance metrics (Sensitivity, Positive Prediction, and Detection Error Rate)
+    by comparing the detected R-wave peaks with the ground truth labels.
+    
+    Parameters:
+    - labels: Ground truth R-wave peak locations.
+    - detections: Detected R-wave peak locations.
+    - offset_threshold: The maximum allowable offset (in samples) for a detection to be considered a match to a label.
+
+    Returns:
+    - tp: Number of True Positives.
+    - fn: Number of False Negatives.
+    - fp: Number of False Positives.
+    """
+    tp = 0  # True positives
+    fn = 0  # False negatives
+    fp = 0  # False positives
+
+    unmatched_detections = detections.copy()  # Copy of detections to remove matched ones
+
+    # Calculate True Positives (TP) and False Negatives (FN)
+    for label in labels:
+        matched = False
+        for detection in detections:
+            if abs(label - detection) <= offset_threshold:  # Considered a match if within the offset threshold
+                tp += 1
+                matched = True
+                if detection in unmatched_detections:
+                    unmatched_detections.remove(detection)  # Remove matched detection from the list
+                break
+        if not matched:
+            fn += 1  # If no match is found, it's a false negative
+
+    # Calculate False Positives (FP)
+    for detection in unmatched_detections:
+        fp += 1  # Any unmatched detection is a false positive
+
+    # Calculate Sensitivity (SE), Positive Prediction (+P), and Detection Error Rate (DER)
+    sensitivity_value = sensitivity(tp, fn) * n_labels
+    positive_prediction_value = positive_prediction(tp, fp) * n_labels
+    detection_error_rate_value = detection_error_rate(tp, fn, fp) * n_labels
+
+    print(f"Sensitivity (SE): {sensitivity_value:.2f}%")
+    print(f"Positive Prediction (+P): {positive_prediction_value:.2f}%")
+    print(f"Detection Error Rate (DER): {detection_error_rate_value:.3f}%")
+
+    return f"Sensitivity (SE): {sensitivity_value:.2f}%\nPositive Prediction (+P): {positive_prediction_value:.2f}%\nDetection Error Rate (DER): {detection_error_rate_value:.3f}%\n"
