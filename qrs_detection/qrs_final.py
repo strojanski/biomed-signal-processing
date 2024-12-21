@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-
+import wfdb
 from utils import *
 
 
@@ -10,15 +10,7 @@ data_dir = "data/mit-bih-arrhythmia-database-1.0.0/"
 records = os.listdir(data_dir)
 records = sorted(list(set([record.split(".")[0] for record in records if record.endswith(".dat")])))
 
-# for beta1 in [1e-6,0.00001, 0.0001, 0.001, 0.01, 0.1]:
-#     for beta2 in [1e-6,0.00001, 0.0001, 0.001, 0.01, 0.1]:
-#         for T in [0.001, 0.005, 0.01, 0.05, 0.1, 0.5]:
-beta1=1e-5
-beta2=1e-5
-T=0.01
-
-f = open(f"results_norm/results_{beta1}_{beta2}_{T}.txt", "w")
-
+symbols = ["N"]
 ress = []
 for rec_name in records:
     rec = read_record(f"{data_dir}{rec_name}")
@@ -71,7 +63,7 @@ for rec_name in records:
 # Compute the adaptive threshold and refine candidates
     refined_r_wave_candidates = refine_r_wave_candidates(
         score, r_wave_candidates, fs, 
-        lambda score, peaks, fs: calculate_adaptive_threshold(score, peaks, fs, T, beta1, beta2)
+        lambda score, peaks, fs: calculate_adaptive_threshold(score, peaks, fs, 0.01, 1e-5, 1e-5)
     )
 
 
@@ -83,18 +75,14 @@ for rec_name in records:
         window=0.15,
         threshold=0.25
     )
+    
+    symbols = np.array(["N" for i in range(len(refined_peaks_variation_test))])
+    
+    wfdb.io.wrann(rec_name, "qrs", np.array(refined_peaks_variation_test), symbol=symbols)
 
     labels = ann.sample[1:]
     print(rec_name)
-    res = get_norm_metrics(labels, refined_peaks_variation_test, 10, len(labels))
-
+    res = get_metrics(labels, refined_peaks_variation_test, 10)
     ress.append(res)
-f.write(f"-------------------\n{rec_name}\n")
-f.write("\n".join([str(res) for res in ress]) + "\n") # str(ress)
-    # with open(f"results.txt", "a") as f:
-    #     f.write(f"-------------------\n{rec_name}\n")
-    #     f.write(res)
-    #     f.close()
-f.close()
 
 
