@@ -49,9 +49,9 @@ def canny_detector(img, improve=False):
     # Bx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
     # By = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
 
+    # Scharr kernels
     Bx = np.array([[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]])
     By = np.array([[-3, -10, -3], [0, 0, 0], [3, 10, 3]])
-
 
 
     CT_sobel_x = convolve(CT_image_gauss, Bx, mode='reflect')

@@ -6,3 +6,4 @@ qrs_detection/data/*
 canny_ct/data/*
 canny_ct/.venv
 canny_ct/res/*
+canny_ct/get_data.py
