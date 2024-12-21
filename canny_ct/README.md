@@ -17,3 +17,12 @@ Other files:
 
 The `report.pdf` explains the whole process in more detail.
 To run the code, initialize a new environment (`venv`), activate it and install the required dependencies (`pip install -r requirements.txt`)
+
+
+
+Visualization samples:
+
+![3D top down](3D_top_down.png) \
+
+
+![3D diagonal](3D_diagonally.png)

@@ -15,8 +15,8 @@ def visualize_pointcloud(pointcloud):
         marker=dict(
             size=2,
             color=distances, 
-            colorscale='viridis',  # Change to deep_r or gray if desired
-            opacity=0.8
+            colorscale='cividis',  # Change to deep_r or gray if desired
+            opacity=1
         )
     )])
 
