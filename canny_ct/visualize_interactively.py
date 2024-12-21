@@ -7,7 +7,7 @@ import cv2
 from skimage.filters import threshold_otsu
 from skimage.color import rgb2gray
 
-def load_images_from_folder(folder, limit=50):
+def load_images_from_folder(folder, limit=20):
     """Load and preprocess images from a folder."""
     images = []
     for filename in sorted(os.listdir(folder))[:limit]:
@@ -95,7 +95,6 @@ def visualize_pointcloud(pointcloud):
     # Calculate distances from the center for coloring
     distances = np.sqrt(np.sum((pointcloud - center) ** 2, axis=1))
     print(pointcloud[:, 2])
-    pointcloud[:, 2] = pointcloud[:, 2] / 10  # Example: scaling_factor = 2.0
 
     fig = go.Figure(data=[go.Scatter3d(
         x=pointcloud[:, 0],
@@ -126,7 +125,9 @@ def visualize_pointcloud(pointcloud):
     fig.show()
 
 # Example usage
-folder_path = 'res/Images-Patient-000302-01/3'  # Change this to your folder with edge images
+folder_path = 'res/Images-Patient-066259-01/3'  # Change this to your folder with edge images
+folder_path = 'body'  # Change this to your folder with edge images
+
 images = load_images_from_folder(folder_path)
 pointcloud = link_edges_24_connectivity(images)
 visualize_pointcloud(pointcloud)
