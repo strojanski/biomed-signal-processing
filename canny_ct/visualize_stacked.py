@@ -33,8 +33,11 @@ def create_pointcloud_from_images(images):
 def visualize_pointcloud(pointcloud):
     """Visualize the 3D point cloud interactively."""
     
+    center = np.mean(pointcloud, axis=0)  # [x_center, y_center, z_center]
+    distances = np.sqrt(np.sum((pointcloud - center) ** 2, axis=1))
+
     print(pointcloud.shape)
-    # Create a Plotly scatter3d plot
+    
     fig = go.Figure(data=[go.Scatter3d(
         x=pointcloud[:, 0],
         y=pointcloud[:, 1],
@@ -42,9 +45,9 @@ def visualize_pointcloud(pointcloud):
         mode='markers',
         marker=dict(
             size=2,
-            color=pointcloud[:, 2],  # Use z-axis for coloring
-            colorscale='Viridis',
-            opacity=0.8
+            color=distances, 
+            colorscale='cividis',  # Change to deep_r or gray if desired
+            opacity=1
         )
     )])
 

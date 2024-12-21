@@ -26,3 +26,6 @@ Visualization samples:
 
 
 ![3D diagonal](3D_diagonally.png)
+
+
+![Lung Cross Section](lungs.png) 

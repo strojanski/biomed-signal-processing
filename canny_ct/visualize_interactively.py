@@ -102,9 +102,9 @@ def visualize_pointcloud(pointcloud):
         mode='markers',
         marker=dict(
             size=2,
-            color=distances,  # Use distances from the center for coloring
-            colorscale='gray',  # Change the color scale if desired
-            opacity=0.8
+            color=distances, 
+            colorscale='cividis',  # Change to deep_r or gray if desired
+            opacity=1
         )
     )])
 
@@ -124,7 +124,7 @@ def visualize_pointcloud(pointcloud):
     fig.show()
 
 # Example usage
-folder_path = 'res/Images-Patient-000302-01/2'  # Change this to your folder with edge images
+folder_path = 'res/Images-Patient-000302-01/3'  # Change this to your folder with edge images
 images = load_images_from_folder(folder_path)
 pointcloud = link_edges_24_connectivity(images)
 visualize_pointcloud(pointcloud)
