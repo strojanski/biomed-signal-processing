@@ -44,9 +44,15 @@ def canny_detector(img, improve=False):
     sigma = min(CT_image.shape) * 0.005
     B = calc_gaussian_kernel(sigma)
     CT_image_gauss = convolve(CT_image, B, mode='reflect')
+    
     # Sobel kernels
-    Bx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
-    By = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
+    # Bx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+    # By = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
+
+    Bx = np.array([[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]])
+    By = np.array([[-3, -10, -3], [0, 0, 0], [3, 10, 3]])
+
+
 
     CT_sobel_x = convolve(CT_image_gauss, Bx, mode='reflect')
     CT_sobel_y = convolve(CT_image_gauss, By, mode='reflect')
