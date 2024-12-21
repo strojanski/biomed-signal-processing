@@ -3,3 +3,6 @@ qrs_detection/data/*
 */.venv/*
 
 */__pycache__/
+canny_ct/data/*
+canny_ct/.venv
+canny_ct/res/*
