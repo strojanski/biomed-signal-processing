@@ -94,6 +94,8 @@ def visualize_pointcloud(pointcloud):
 
     # Calculate distances from the center for coloring
     distances = np.sqrt(np.sum((pointcloud - center) ** 2, axis=1))
+    print(pointcloud[:, 2])
+    pointcloud[:, 2] = pointcloud[:, 2] / 10  # Example: scaling_factor = 2.0
 
     fig = go.Figure(data=[go.Scatter3d(
         x=pointcloud[:, 0],

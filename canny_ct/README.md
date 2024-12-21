@@ -22,10 +22,14 @@ To run the code, initialize a new environment (`venv`), activate it and install 
 
 Visualization samples:
 
-![3D top down](3D_top_down.png) \
+Example of input image: \
+![Example CT](figures/0003.png)
 
+Examples of different pointclouds: \
+![3D top down](figures/3D_top_down.png) \
 
-![3D diagonal](3D_diagonally.png)
+![3D diagonal](figures/3D_diagonally.png)
 
+![Lung Cross Section](figures/lungs.png) 
 
-![Lung Cross Section](lungs.png) 
+![5 Samples](figures/5_samples.png)
