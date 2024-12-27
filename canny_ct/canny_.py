@@ -18,32 +18,28 @@ def calc_gaussian_kernel(sigma):
 def make_positive(angle):
     return angle % 360
 
-def canny_detector(img, improve=False):
+def canny_detector(img):
     # Load the image
-    CT_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    ct_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         
-    CT_image = resize_image(CT_image, (400, 400))
+    ct_img = resize_image(ct_img, (400, 400))
     
-    CT_image = CT_image.astype(np.float64) / 255.0
+    ct_img = ct_img.astype(np.float64) / 255.0
 
     # Determine thresholds
-    if improve:
-        const = .15
-        image_mean = np.mean(CT_image)
-        image_std = np.std(CT_image) / 2
-        lower_bound = max(0, image_mean - image_std)
-        upper_bound = min(1, image_mean + image_std)
-        threshold_l = max(0, const * lower_bound) 
-        threshold_h = min(1, const * upper_bound)
-        print(threshold_l, threshold_h)
-    else:
-        threshold_l = 0.060
-        threshold_h = 0.160
+    const = .6
+    image_mean = np.mean(ct_img)
+    image_std = np.std(ct_img) / 2
+    lower_bound = max(0, image_mean - image_std)
+    upper_bound = min(1, image_mean + image_std)
+    threshold_l = max(0, const * lower_bound) 
+    threshold_h = min(1, const * upper_bound)
+    print(threshold_l, threshold_h)
 
     # Apply Gaussian filter
-    sigma = min(CT_image.shape) * 0.005
+    sigma = 3
     B = calc_gaussian_kernel(sigma)
-    CT_image_gauss = convolve(CT_image, B, mode='reflect')
+    ct_img_gauss = convolve(ct_img, B, mode='reflect')
     
     # Sobel kernels
     # Bx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
@@ -54,12 +50,12 @@ def canny_detector(img, improve=False):
     By = np.array([[-3, -10, -3], [0, 0, 0], [3, 10, 3]])
 
 
-    CT_sobel_x = convolve(CT_image_gauss, Bx, mode='reflect')
-    CT_sobel_y = convolve(CT_image_gauss, By, mode='reflect')
+    ct_sobel_x = convolve(ct_img_gauss, Bx, mode='reflect')
+    ct_sobel_y = convolve(ct_img_gauss, By, mode='reflect')
 
     # Edge gradient and angles
-    edge_gradient = np.sqrt(CT_sobel_x**2 + CT_sobel_y**2)
-    angle = np.arctan2(CT_sobel_y, CT_sobel_x) * (180 / np.pi)
+    edge_gradient = np.sqrt(ct_sobel_x**2 + ct_sobel_y**2)
+    angle = np.arctan2(ct_sobel_y, ct_sobel_x) * (180 / np.pi)
     angle = np.where(angle < 0, angle + 360, angle)
 
     # Quantize angles to 0, 45, 90, 135

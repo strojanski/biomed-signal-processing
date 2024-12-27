@@ -57,17 +57,17 @@ def visualize_edge_sequences(original_images, linked_images, final_linked_images
     for i in range(limit):
         # Original image with edges
         axes[i, 0].imshow(original_images[i], cmap='gray')
-        axes[i, 0].set_title(f"Original Edges - Slice {i+1}", color="red")
+        axes[i, 0].set_title(f"Original Edges - Slice {i+1}", color="green")
         axes[i, 0].axis('off')
         
         # Image after edge linking within the slice
         axes[i, 1].imshow(linked_images[i], cmap='gray')
-        axes[i, 1].set_title(f"Linked Edges - Slice {i+1}", color="red")
+        axes[i, 1].set_title(f"Linked Edges - Slice {i+1}", color="green")
         axes[i, 1].axis('off')
         
         # Final image after 24-connectivity edge linking
         axes[i, 2].imshow(final_linked_images[i], cmap='gray')
-        axes[i, 2].set_title(f"Final Linked Edges - Slice {i+1}", color="red")
+        axes[i, 2].set_title(f"Final Linked Edges - Slice {i+1}", color="green")
         axes[i, 2].axis('off')
     
     plt.tight_layout()
@@ -92,12 +92,11 @@ def show_imgs(imgs, title, limit=10):
        plt.show()
     
 if __name__ == "__main__":
-    process_stack("data/download/Images-Patient-000302-01/1.3.12.2.1107.5.1.4.50454.30000008011507012606200000061/2/")
+    process_stack("data/download/Images-Patient-066259-01/1.2.392.200036.9116.2.5.1.16.1613446658.1313969547.777184/3/")
 
     pointcloud = link_edges_3d(np.array(detected_edges))
     connectivity_edges = pointcloud
     
-    print(pointcloud)
     
     # show_imgs(original_imgs, title="Original", limit=10)
     # show_imgs(detected_edges, title="Detected Edges", limit=10)

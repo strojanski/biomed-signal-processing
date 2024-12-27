@@ -20,11 +20,10 @@ def load_images_from_folder(folder, limit=20):
                 print(f"Converting image {filename} to grayscale")
                 img_array = rgb2gray(img_array)  # Convert to grayscale (float [0, 1])
 
+            print(set(img_array.flatten()))
             # Binarize the grayscale image
-            thresh = threshold_otsu(img_array)  # Compute Otsu threshold
-            binary_img = (img_array > thresh).astype(int)  # Binarize image
-            print(f"Processed image {filename}: shape = {binary_img.shape}, unique values = {np.unique(binary_img)}")
-            images.append(binary_img)
+            print(f"Processed image {filename}: shape = {img_array.shape}, unique values = {np.unique(img_array)}")
+            images.append(img_array)
     return images
 
 

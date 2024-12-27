@@ -7,3 +7,5 @@ canny_ct/data/*
 canny_ct/.venv
 canny_ct/res/*
 canny_ct/get_data.py
+canny_ct/brain/
+canny_ct/body/

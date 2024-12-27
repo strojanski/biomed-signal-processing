@@ -4,10 +4,10 @@ This repository contains files for detecting contours of human organs in 3D CT i
 
 
 The repository consists of the following files:
+- `complete_ct_contour_reconstruction.py contains code for fulfilling the task. It receives the path to a folder with CT images and displays the original images along with the edges, pre and post 24 connectivity algorithm. 
 - `canny_.py` contains implementation of the canny edge detector
 - `canny.ipynb` contains development code for the canny detector implementation and shows threshold selection based on similarity of images returned by our implementation and the cv2.Canny() funciton.
 - `detect_edges_all.ipynb` contains code for edge detection on the entire database
-- `complete_ct_contour_reconstruction.py contains code for fulfilling the task. It receives the path to a folder with CT images and displays the original images along with the edges, pre and post 24 connectivity algorithm. 
 
 Other files:
 - `visualize.ipynb` generates a 3D point cloud visualization using matplotlib.
