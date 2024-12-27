@@ -93,7 +93,7 @@ def show_imgs(imgs, title, limit=10):
     
 if __name__ == "__main__":
     process_stack("data/download/Images-Patient-066259-01/1.2.392.200036.9116.2.5.1.16.1613446658.1313969547.777184/3/")
-
+    # process_stack("data/download/Images-Patient-000302-01/1.3.12.2.1107.5.1.4.50454.30000008011507012606200000061/3/")
     pointcloud = link_edges_3d(np.array(detected_edges))
     connectivity_edges = pointcloud
     

@@ -6,6 +6,7 @@ def visualize_pointcloud(pointcloud):
     
     center = np.mean(pointcloud, axis=0)  # [x_center, y_center, z_center]
     distances = np.sqrt(np.sum((pointcloud - center) ** 2, axis=1))
+    pointcloud[:, 2] = -pointcloud[:, 2]
 
     fig = go.Figure(data=[go.Scatter3d(
         x=pointcloud[:, 0],

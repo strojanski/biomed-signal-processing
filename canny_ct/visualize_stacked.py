@@ -37,7 +37,8 @@ def visualize_pointcloud(pointcloud):
     distances = np.sqrt(np.sum((pointcloud - center) ** 2, axis=1))
 
     print(pointcloud.shape)
-    
+    pointcloud[:, 2] = -pointcloud[:, 2]
+
     fig = go.Figure(data=[go.Scatter3d(
         x=pointcloud[:, 0],
         y=pointcloud[:, 1],

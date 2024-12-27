@@ -29,11 +29,15 @@ def canny_detector(img):
     # Determine thresholds
     const = .6
     image_mean = np.mean(ct_img)
-    image_std = np.std(ct_img) / 2
-    lower_bound = max(0, image_mean - image_std)
-    upper_bound = min(1, image_mean + image_std)
-    threshold_l = max(0, const * lower_bound) 
-    threshold_h = min(1, const * upper_bound)
+    image_std = np.std(ct_img)
+    lower_bound = max(0.05, image_mean - image_std)
+    upper_bound = min(0.95, image_mean + image_std)
+    threshold_l = max(0.05, const * lower_bound) 
+    threshold_h = min(0.95, const * upper_bound)
+    
+    if threshold_h / threshold_l < 2:
+        threshold_h += threshold_l
+        threshold_l += .5 * threshold_l
     print(threshold_l, threshold_h)
 
     # Apply Gaussian filter
@@ -42,12 +46,12 @@ def canny_detector(img):
     ct_img_gauss = convolve(ct_img, B, mode='reflect')
     
     # Sobel kernels
-    # Bx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
-    # By = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
+    Bx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+    By = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
 
     # Scharr kernels
-    Bx = np.array([[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]])
-    By = np.array([[-3, -10, -3], [0, 0, 0], [3, 10, 3]])
+    # Bx = np.array([[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]])
+    # By = np.array([[-3, -10, -3], [0, 0, 0], [3, 10, 3]])
 
 
     ct_sobel_x = convolve(ct_img_gauss, Bx, mode='reflect')
