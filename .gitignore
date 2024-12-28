@@ -9,3 +9,4 @@ canny_ct/res/*
 canny_ct/get_data.py
 canny_ct/brain/
 canny_ct/body/
+canny_ct/res_py/*

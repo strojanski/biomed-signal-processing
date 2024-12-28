@@ -14,7 +14,7 @@ Other files:
 - `visualize_interactively.py` generates an interactable 3D scatter plot of the pointcloud, with 24 point connectivity in the browser.
 - `visualize_stacked.py` generates an interactable 3D scatter plot of the pointcloud with stacked edges and no 24 point connectivity.
 - `vis.py` is a demo for when you don't have access to data and displays precomputed pointcloud, saved in `pc.npy`.
-
+- `compare_algorithms.ipynb` computes the pixel match ratio between the python's detector and our detector.
 The `report.pdf` explains the whole process in more detail.
 To run the code, initialize a new environment (`venv`), activate it and install the required dependencies (`pip install -r requirements.txt`)
 
@@ -27,6 +27,8 @@ Example of input image: \
 
 Examples of different pointclouds: \
 ![3D top down](figures/3D_top_down.png) \
+
+![3D lungs](figures/lungs_afar.png) \ 
 
 ![3D diagonal](figures/3D_diagonally.png)
 
